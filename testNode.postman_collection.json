@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "fbd76383-a902-4b78-8e6b-dc7e7031bf89",
+		"name": "testNode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/getcabs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getcabs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getcabs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjI3MjY2MDE1LCJleHAiOjE2MjcyNjk2MTV9.iEzTW4WR6PCDkrSx6vTS2E2pUoRBUTLeI54LwPlYaEA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":0,\r\n    \"RideFee\":20,\r\n    \"bookingDate\":\"2021-07-22T02:15:12.356Z\",\r\n    \"source\":{\r\n        \"id\":0,\r\n        \"address\":\"Bahteda\",\r\n        \"lat\":\"24.572729\",        \r\n        \"long\":\"74.009346\"\r\n    },\r\n    \"destination\":{\r\n        \"id\":0,\r\n        \"address\":\"Kharsan\",\r\n        \"lat\":\"24.593334\",        \r\n        \"long\":\"74.032364\"\r\n    },\r\n    \"statusId\":0,\r\n    \"cabId\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/account/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobileNo\":\"9799758757\",\r\n    \"password\":\"pass@word1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/account/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/rides/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjI3MjY2MDE1LCJleHAiOjE2MjcyNjk2MTV9.iEzTW4WR6PCDkrSx6vTS2E2pUoRBUTLeI54LwPlYaEA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users/rides/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"rides",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
